@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.todoencasaapp_final">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".ValoracionServicio2Activity"
+                  android:label="Valoración del servicio">
+        </activity>
+        <activity android:name=".ValoracionServicioActivity"
+                  android:label="Valoración del servicio">
+        </activity>
+        <activity android:name=".ContratarActivity"
+                  android:label="Contratar">
+        </activity>
+        <activity android:name=".CertificadoActivity"
+                  android:label="Certificado">
+        </activity>
+        <activity android:name=".Instalaciones2Activity"
+                  android:label="Instalciones">
+        </activity>
+        <activity android:name=".InstalacionesActivity"
+                  android:label="Instalciones">
+        </activity>
+        <activity android:name=".Solicitud3Activity"
+                  android:label="Solicitud">
+        </activity>
+        <activity android:name=".Solicitud2Activity"
+                  android:label="Solicitud">
+        </activity>
+        <activity android:name=".SolicitudActivity"
+                  android:label="Solicitud">
+        </activity>
+        <activity android:name=".DetallesServicio2Activity"
+                  android:label="Detalles del servicio">
+        </activity>
+        <activity android:name=".DetallesServicioActivity"
+                  android:label="Detalles del servicio">
+        </activity>
+        <activity android:name=".MiCuentaActivity"
+                  android:label="Mi cuenta">
+        </activity>
+        <activity android:name=".TerminosCondicionesActivity"
+                  android:label="Términos y condiciones">
+        </activity>
+        <activity android:name=".RegistrarActivity"
+                  android:label="Registrar">
+        </activity>
+        <activity
+                android:name=".AcarreosActivity"
+                android:label="Solicitar Servicio">
+        </activity>
+        <activity
+                android:name=".MecanicaActivity"
+                android:label="Solicitar Servicio">
+        </activity>
+        <activity
+                android:name=".LimpiezaActivity"
+                android:label="Solicitar Servicio">
+        </activity>
+        <activity
+                android:name=".RefrigeracionActivity"
+                android:label="Solicitar Servicio">
+        </activity>
+        <activity
+                android:name=".ElectricidadActivity"
+                android:label="Solicitar Servicio">
+        </activity>
+        <activity
+                android:name=".CarpinteriaActivity"
+                android:label="Solicitar Servicio">
+        </activity>
+        <activity
+                android:name=".CiudadesActivity"
+                android:label="Selecciona tu ciudad">
+        </activity>
+        <activity
+                android:name=".SplashActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:label="Todo en Casa App"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>

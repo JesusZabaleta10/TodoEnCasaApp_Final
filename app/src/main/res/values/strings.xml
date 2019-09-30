@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">TodoEnCasaApp_Final</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Mi cuenta</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="bienvenido">Bienvenido a todoencasaapp</string>
+    <string name="nombre_usuario">Nombre del usuario</string>
+    <string name="correo_usuario">correo_usuario@gmail.com</string>
+    <string name="inicio">Inicio</string>
+    <string name="categorias">Categorias</string>
+    <string name="historial">Historial</string>
+    <string name="solicitudes">Solicitudes</string>
+    <string name="ofrecer_servicios">Ofrecer servicios</string>
+    <string name="acerca">Acerca de</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="login">Iniciar Sesion</string>
+    <string name="registrar">Regístrate</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="ciudades">Ciudades</string>
+    <string name="barranquilla">Barranquilla</string>
+    <string name="bogota">Bogotá</string>
+    <string name="cali">Cali</string>
+    <string name="cartagena">Cartagena</string>
+    <string name="ibague">Ibagué</string>
+    <string name="medellin">Medellín</string>
+    <string name="montelibano">Montelibano</string>
+    <string name="monteria">Monteria</string>
+    <string name="pereira">Pereira</string>
+    <string name="valledupar">Valledupar</string>
+    <string name="electricidad">Electricidad</string>
+    <string name="carpinteria">Carpintería</string>
+    <string name="refrigeracion">Refrigeración</string>
+    <string name="limpieza">Limpieza</string>
+    <string name="mecanica">Mecánica</string>
+    <string name="acarreo">Acarreos</string>
+    <string name="cocina">Cocina</string>
+    <string name="muebles">Muebles</string>
+    <string name="pisos">Pisos</string>
+    <string name="puertas">Puertas</string>
+    <string name="tapizados">Tapizados</string>
+    <string name="iluminacion">Iluminación</string>
+    <string name="reparaciones">Reparaciones</string>
+    <string name="instalaciones">Instalaciones</string>
+    <string name="aire">Aire acondicionado</string>
+    <string name="calentadores">Calentadores</string>
+    <string name="neveras">Neveras</string>
+    <string name="alfombra">Alfombra</string>
+    <string name="lavanderia">Lavandería</string>
+    <string name="automoviles">Automóviles</string>
+    <string name="motocicletas">Motocicletas</string>
+    <string name="bicicletas">Bicicletas</string>
+    <string name="todoencasaapp">TodoEnCasaApp</string>
+    <string name="version">Versión 1.0.0</string>
+    <string name="sobre_app">TodoEnCasaApp es una eplicación móvil que permite ofrecer y contratar servicios técnicos
+        que tiene como finalidad resolver de manera rápida, segura y confiable los problemas más comunes o frecuentes
+        que se presentan en el hogar y oficina sin que el usuario tenga la necesidad de movilizarse a un lugar para
+        encontrar a una persona especializada que realice el trabajo.
+    </string>
+    <string name="olvidaste">¿Olvidaste tu contraseña?</string>
+    <string name="cuenta">¿Aún no tienes cuenta?</string>
+    <string name="registro">Registro de usuario</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="telefono">Teléfono celular</string>
+    <string name="confirmar_contraseña">Confirmar contraseña</string>
+    <string name="ciudad_residencia">Ciudad de residencia</string>
+    <string name="condiciones">Acepto terminos y condiciones</string>
+    <string name="terminos">Términos y condiciones</string>
+    <string name="terminos_condiciones">Esta página establece los “Términos y Condiciones” bajo los cuales los usuarios
+        – consumidores - pueden usar el sitio web y la aplicación móvil dedicados principalmente a la facilitación e
+        intermediación para pedir domicilios en Colombia, por medio de la publicación y condensación de toda la
+        información necesaria para realizar tal labor (cartas, menús, horarios de establecimientos, cobertura de
+        domicilios, precios, promociones especiales) así como el acompañamiento de personal dedicado y entrenado durante
+        el desarrollo de la relación de consumo, buscando siempre la satisfacción del consumidor final, como el objetivo
+        fundamental de la relación. Se requiere que todo usuario, previo a su registro, lea estos términos y condiciones
+        cuidadosamente, y dé el respectivo consentimiento expreso acerca de su compresión y aprobación. El
+        desconocimiento del contenido de estos términos y condiciones, no justifican el incumplimiento de los mismos, y
+        mucho menos, facultan a los consumidores para tomar medidas particulares o legales que desconozcan lo planteado
+        en estos términos. Nuestra Compañía se exime de toda responsabilidad en caso de que los usuarios utilicen los
+        servicios sin consentir los términos y condiciones del sitio web o aplicación móvil, y se reserva la facultad de
+        tomar todas las medidas legales pertinentes en estos casos.
+    </string>
+    <string name="registrarme">Registrarme</string>
+    <string name="mi_cuenta">Mi cuenta</string>
+    <string name="nombres_usuario">Nombres Usuario</string>
+    <string name="apellidos_usuario">Apellidos usuario</string>
+    <string name="telefono_usuario">Teléfono usuario</string>
+    <string name="ciudad_usuario">Ciudad del usuario</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="electricista">Duvan Mendoza</string>
+    <string name="tecnico">Técnico electricista</string>
+    <string name="electricista2">Camilo Hernandez</string>
+    <string name="detalles">Detalles del servicio</string>
+    <string name="estado">Estado: Solicitado</string>
+    <string name="dia">Dia: 13/04/2017</string>
+    <string name="hora">Hora: 11:00 a 14:00</string>
+    <string name="direccion">Dirección: Cll 107B #12A - 67</string>
+    <string name="celular">Teléfono/Celular: 3137561189</string>
+    <string name="servicio">Servicio: Instalaciones</string>
+    <string name="fecha">Fecha de solicitud: 27/03/2017</string>
+    <string name="cancelar">Cancelar este servicio</string>
+    <string name="estado2">Estado: Cancelado</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="nombre_completo2">Duvan Alberto Mendoza Fajardo</string>
+    <string name="edad">Edad</string>
+    <string name="edad_tecnico">25 años</string>
+    <string name="contacto">Teléfono celular: (314)711-8771</string>
+    <string name="contacto_tecnico">Contacto</string>
+    <string name="contacto2">Correo: duvan.mendoza@gmail.com</string>
+    <string name="descripcion">Descripción</string>
+    <string name="descripcion2">Realizo diseño de planos eléctricos, montajes eléctricos, cableado estructurado, instalo
+        todo lo que tiene que ver con iluminación, sistema de seguridad electrónico, alarmas, sensores, etc.
+    </string>
+    <string name="experiencia">Experiencia</string>
+    <string name="experiencia2">46 meses</string>
+    <string name="categoria">Categoria</string>
+    <string name="categoria2">Electricidad</string>
+    <string name="sub_categoria">Subcategoria</string>
+    <string name="sub_categoria2">Instalaciones</string>
+    <string name="certificado">Adjuntar certificado</string>
+    <string name="registrar_tecnico">Registrarme como técnico</string>
+    <string name="horario">Horarios</string>
+    <string name="horario2">Domingo de 07:00 a 17:00</string>
+    <string name="horario3">Lunes de 07:00 a 17:00</string>
+    <string name="horario4">Martes de 07:00 a 17:00</string>
+    <string name="horario5">Miércoles de 07:00 a 17:00</string>
+    <string name="horario6">Jueves de 07:00 a 17:00</string>
+    <string name="horario7">Viernes de 07:00 a 17:00</string>
+    <string name="direccion_tecnico">Dirección</string>
+    <string name="direccion_tecnico2">Cra 52A #67A-58</string>
+    <string name="cliente">Ana Reyes Diaz</string>
+    <string name="categoria_cliente">Electricidad - Instalaciones</string>
+    <string name="solicitud">Solicitud</string>
+    <string name="descripcion3">Necesito instalar la iluminación de mi casa</string>
+    <string name="estado3">Estado: Rechazado</string>
+    <string name="estado4">Estado: Aceptado</string>
+    <string name="finalizar">Finalizar servicio</string>
+    <string name="electricista3">Brayan Gonzalez</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="comentarios2"/>
+    <string name="certificado2">Certificado</string>
+    <string name="contratar">Contratar</string>
+    <string name="servicio2">Servicio</string>
+    <string name="servicio3">Electricidad - Instalaciones</string>
+    <string name="dia2">Dia del servicio</string>
+    <string name="dia3">13/04/2017</string>
+    <string name="horas_disponibles">Horas disponibles</string>
+    <string name="horas_disponibles2">10:00 a 14:00</string>
+    <string name="tu_direccion2">Cll 107B # 12A - 67</string>
+    <string name="telefono_cliente">3137541189</string>
+    <string name="necesitas">Escribe lo que necesitas</string>
+    <string name="datos_cliente">Datos del cliente</string>
+    <string name="solicitar">Solicitar</string>
+    <string name="valoracion">Valoración del servicio</string>
+    <string name="valorar_servicio">Valorar servicio</string>
+    <string name="comentario_servicio">Comentario del servicio</string>
+    <string name="comentario_servicio2">Excelente el servicio, muy amable el muchacho, es rápido, trabajador y se nota
+        que fue bien formado.
+    </string>
+</resources>

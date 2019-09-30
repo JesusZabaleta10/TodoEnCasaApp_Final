@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".InicioFragment">
+
+    <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="261dp"
+                android:id="@+id/mantenimiento"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/mantenimiento"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/ciudades"
+                android:layout_marginTop="240dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/ciudad"
+                    android:text="@string/ciudad"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginLeft="130dp"
+                    android:textColor="@color/white"/>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/marcador"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/marcador"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="281dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="132dp"
+                    android:id="@+id/carpinteria"
+                    android:text="@string/carpinteria"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/carpinteria"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="132dp"
+                    android:id="@+id/electricidad"
+                    android:text="@string/electricidad"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/electricidad"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="415dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="132dp"
+                    android:id="@+id/refrigeracion"
+                    android:text="@string/refrigeracion"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/refigeracion"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="132dp"
+                    android:id="@+id/limpieza"
+                    android:text="@string/limpieza"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/limpieza"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="549dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="132dp"
+                    android:id="@+id/mecanica"
+                    android:text="@string/mecanica"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/mecanica"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="132dp"
+                    android:id="@+id/acarreo"
+                    android:text="@string/acarreo"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/acarreos"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>

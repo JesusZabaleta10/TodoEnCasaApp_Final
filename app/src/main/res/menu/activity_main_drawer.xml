@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <item android:title="Usuario">
+        <menu>
+            <item
+                    android:id="@+id/nav_inicio"
+                    android:icon="@drawable/inicio"
+                    android:title="@string/inicio"/>
+            <item
+                    android:id="@+id/nav_categorias"
+                    android:icon="@drawable/categorias"
+                    android:title="@string/categorias"/>
+            <item
+                    android:id="@+id/nav_historial"
+                    android:icon="@drawable/historial"
+                    android:title="@string/historial"/>
+        </menu>
+    </item>
+
+    <item android:title="Técnico">
+        <menu>
+            <item
+                    android:id="@+id/nav_solicitudes"
+                    android:icon="@drawable/solicitudes"
+                    android:title="@string/solicitudes"/>
+            <item
+                    android:id="@+id/nav_ofrecer_servicios"
+                    android:icon="@drawable/ofrecer_servicios"
+                    android:title="@string/ofrecer_servicios"/>
+        </menu>
+    </item>
+
+    <item android:title="Aplicación">
+        <menu>
+            <item
+                    android:id="@+id/nav_acerca"
+                    android:icon="@drawable/acerca"
+                    android:title="@string/acerca"/>
+        </menu>
+    </item>
+
+</menu>
