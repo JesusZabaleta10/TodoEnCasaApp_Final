@@ -37,8 +37,8 @@
     <string name="cartagena">Cartagena</string>
     <string name="ibague">Ibagué</string>
     <string name="medellin">Medellín</string>
-    <string name="montelibano">Montelibano</string>
-    <string name="monteria">Monteria</string>
+    <string name="montelibano">Montelíbano</string>
+    <string name="monteria">Montería</string>
     <string name="pereira">Pereira</string>
     <string name="valledupar">Valledupar</string>
     <string name="electricidad">Electricidad</string>
@@ -228,4 +228,37 @@
         <item>Cúcuta</item>
         <item>Pasto</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="buscar_direccion">Busca tu dirección</string>
+    <string name="escribe_nombre">Escribe tus nombre</string>
+    <string name="departamentos">Departamentos</string>
+    <string name="antioquia">Antioquia</string>
+    <string name="atlantico">Atlántico</string>
+    <string name="bolivar">Bolivar</string>
+    <string name="caldas">Caldas</string>
+    <string name="cordoba">Córdoba</string>
+    <string name="cundinamarca">Cundinamarca</string>
+    <string name="guajira">Guajira</string>
+    <string name="magdalena">Magdalena</string>
+    <string name="nariño">Nariño</string>
+    <string name="valle">Valle del Cauca</string>
+    <string name="bello">Bello</string>
+    <string name="envigado">Envigado</string>
+    <string name="girardota">Girardota</string>
+    <string name="itagui">Itaguí</string>
+    <string name="rionegro">Rionegro</string>
+    <string name="candelaria">Candelaria</string>
+    <string name="manati">Manatí</string>
+    <string name="puerto">Puerto Colombia</string>
+    <string name="santa">Santa Lucia</string>
+    <string name="soledad">Soledad</string>
+    <string name="ayapel">Ayapel</string>
+    <string name="cienaga">Ciénaga de Oro</string>
+    <string name="planeta">Planeta Rica</string>
+    <string name="valencia">Valencia</string>
+    <string name="zipaquira">Zipaquirá</string>
+    <string name="chia">Chía</string>
+    <string name="facatativa">Facatativá</string>
+    <string name="girardot">Girardot</string>
+    <string name="soacha">Soacha</string>
 </resources>

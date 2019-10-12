@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.todoencasaapp_final">
-    
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
             android:allowBackup="true"
@@ -11,91 +14,139 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ValoracionServicio2Activity"
-                  android:parentActivityName=".ValoracionServicio2Activity"
-                  android:label="Valoración del servicio">
+        <activity
+                  android:name=".CundinamarcaActivity"
+                  android:label="Escoge tu ciudad"
+                  android:parentActivityName=".CundinamarcaActivity">
         </activity>
-        <activity android:name=".ValoracionServicioActivity"
-                  android:parentActivityName=".ValoracionServicioActivity"
-                  android:label="Valoración del servicio">
+        <activity
+                android:name=".CordobaActivity"
+                android:label="Escoge tu ciudad"
+                android:parentActivityName=".CordobaActivity">
         </activity>
-        <activity android:name=".ContratarActivity"
-                  android:parentActivityName=".ContratarActivity"
-                  android:label="Contratar">
+        <activity
+                android:name=".AtlanticoActivity"
+                android:label="Escoge tu ciudad"
+                android:parentActivityName=".AtlanticoActivity">
         </activity>
-        <activity android:name=".CertificadoActivity"
-                  android:parentActivityName=".CertificadoActivity"
-                  android:label="Certificado">
+        <activity
+                android:name=".AntioquiaActivity"
+                android:label="Escoge tu ciudad"
+                android:parentActivityName=".AntioquiaActivity">
         </activity>
-        <activity android:name=".Instalaciones2Activity"
-                  android:parentActivityName=".Instalaciones2Activity"
-                  android:label="Instalciones">
+        <activity
+                android:name=".DepartamentosActivity"
+                android:label="Escoge tu departamento"
+                android:parentActivityName=".DepartamentosActivity">
         </activity>
-        <activity android:name=".InstalacionesActivity"
-                  android:parentActivityName=".InstalacionesActivity"
-                  android:label="Instalciones">
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key"/>
+
+        <activity
+                android:name=".MapsActivity"
+                android:label="@string/title_activity_maps">
         </activity>
-        <activity android:name=".Solicitud3Activity"
-                  android:parentActivityName=".Solicitud3Activity"
-                  android:label="Solicitud">
+        <activity
+                android:name=".ValoracionServicio2Activity"
+                android:label="Valoración del servicio"
+                android:parentActivityName=".ValoracionServicio2Activity">
         </activity>
-        <activity android:name=".Solicitud2Activity"
-                  android:parentActivityName=".Solicitud2Activity"
-                  android:label="Solicitud">
+        <activity
+                android:name=".ValoracionServicioActivity"
+                android:label="Valoración del servicio"
+                android:parentActivityName=".ValoracionServicioActivity">
         </activity>
-        <activity android:name=".SolicitudActivity"
-                  android:parentActivityName=".SolicitudActivity"
-                  android:label="Solicitud">
+        <activity
+                android:name=".ContratarActivity"
+                android:label="Contratar"
+                android:parentActivityName=".ContratarActivity">
         </activity>
-        <activity android:name=".DetallesServicio2Activity"
-                  android:parentActivityName=".DetallesServicio2Activity"
-                  android:label="Detalles del servicio">
+        <activity
+                android:name=".CertificadoActivity"
+                android:label="Certificado"
+                android:parentActivityName=".CertificadoActivity">
         </activity>
-        <activity android:name=".DetallesServicioActivity"
-                  android:parentActivityName=".DetallesServicioActivity"
-                  android:label="Detalles del servicio">
+        <activity
+                android:name=".Instalaciones2Activity"
+                android:label="Instalciones"
+                android:parentActivityName=".Instalaciones2Activity">
         </activity>
-        <activity android:name=".MiCuentaActivity"
-                  android:parentActivityName=".MiCuentaActivity"
-                  android:label="Mi cuenta">
+        <activity
+                android:name=".InstalacionesActivity"
+                android:label="Instalciones"
+                android:parentActivityName=".InstalacionesActivity">
         </activity>
-        <activity android:name=".TerminosCondicionesActivity"
-                  android:parentActivityName=".TerminosCondicionesActivity"
-                  android:label="Términos y condiciones">
+        <activity
+                android:name=".Solicitud3Activity"
+                android:label="Solicitud"
+                android:parentActivityName=".Solicitud3Activity">
         </activity>
-        <activity android:name=".RegistrarActivity"
-                  android:parentActivityName=".RegistrarActivity"
-                  android:label="Registrar">
+        <activity
+                android:name=".Solicitud2Activity"
+                android:label="Solicitud"
+                android:parentActivityName=".Solicitud2Activity">
+        </activity>
+        <activity
+                android:name=".SolicitudActivity"
+                android:label="Solicitud"
+                android:parentActivityName=".SolicitudActivity">
+        </activity>
+        <activity
+                android:name=".DetallesServicio2Activity"
+                android:label="Detalles del servicio"
+                android:parentActivityName=".DetallesServicio2Activity">
+        </activity>
+        <activity
+                android:name=".DetallesServicioActivity"
+                android:label="Detalles del servicio"
+                android:parentActivityName=".DetallesServicioActivity">
+        </activity>
+        <activity
+                android:name=".MiCuentaActivity"
+                android:label="Mi cuenta"
+                android:parentActivityName=".MiCuentaActivity">
+        </activity>
+        <activity
+                android:name=".TerminosCondicionesActivity"
+                android:label="Términos y condiciones"
+                android:parentActivityName=".TerminosCondicionesActivity">
+        </activity>
+        <activity
+                android:name=".RegistrarActivity"
+                android:label="Registrar"
+                android:parentActivityName=".RegistrarActivity">
         </activity>
         <activity
                 android:name=".AcarreosActivity"
-                android:parentActivityName=".AcarreosActivity"
-                android:label="Solicitar Servicio">
+                android:label="Solicitar Servicio"
+                android:parentActivityName=".AcarreosActivity">
         </activity>
         <activity
                 android:name=".MecanicaActivity"
-                android:parentActivityName=".MecanicaActivity"
-                android:label="Solicitar Servicio">
+                android:label="Solicitar Servicio"
+                android:parentActivityName=".MecanicaActivity">
         </activity>
         <activity
                 android:name=".LimpiezaActivity"
-                android:parentActivityName=".LimpiezaActivity"
-                android:label="Solicitar Servicio">
+                android:label="Solicitar Servicio"
+                android:parentActivityName=".LimpiezaActivity">
         </activity>
         <activity
                 android:name=".RefrigeracionActivity"
-                android:parentActivityName=".RefrigeracionActivity"
-                android:label="Solicitar Servicio">
+                android:label="Solicitar Servicio"
+                android:parentActivityName=".RefrigeracionActivity">
         </activity>
         <activity
                 android:name=".ElectricidadActivity"
-                android:parentActivityName=".ElectricidadActivity"
-                android:label="Solicitar Servicio">
+                android:label="Solicitar Servicio"
+                android:parentActivityName=".ElectricidadActivity">
         </activity>
         <activity
                 android:name=".CarpinteriaActivity"
-                android:parentActivityName=".CarpinteriaActivity"
-                android:label="Solicitar Servicio">
+                android:label="Solicitar Servicio"
+                android:parentActivityName=".CarpinteriaActivity">
         </activity>
         <activity
                 android:name=".SplashActivity"

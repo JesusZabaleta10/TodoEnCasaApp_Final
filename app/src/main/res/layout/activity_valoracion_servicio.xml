@@ -7,23 +7,16 @@
         android:orientation="vertical"
         tools:context=".ValoracionServicioActivity">
 
-    <LinearLayout
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/gainsboro"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:gravity="center"
-            android:orientation="horizontal">
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:textAllCaps="true"
-                android:textSize="20sp"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:text="@string/valoracion"/>
-    </LinearLayout>
+            android:text="@string/valoracion"/>
 
     <LinearLayout
             android:layout_width="match_parent"

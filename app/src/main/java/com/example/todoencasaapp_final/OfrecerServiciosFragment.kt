@@ -1,11 +1,8 @@
 package com.example.todoencasaapp_final
 
-import android.Manifest
 import android.app.Activity
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.fragment.app.Fragment
@@ -15,9 +12,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.core.content.PermissionChecker.checkSelfPermission
-import kotlinx.android.synthetic.main.activity_mi_cuenta.*
-import kotlinx.android.synthetic.main.fragment_ofrecer_servicios.*
+import kotlinx.android.synthetic.main.activity_registrar.*
 import kotlinx.android.synthetic.main.fragment_ofrecer_servicios.view.*
 
 class OfrecerServiciosFragment : Fragment() {
@@ -63,9 +58,16 @@ class OfrecerServiciosFragment : Fragment() {
             Toast.makeText(root.context,"Técnico registrado",Toast.LENGTH_SHORT).show()
         }
 
+        //------------ Camara -------------------------------------------------------
         root.certificado.setOnClickListener{
             var i = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivityForResult(i,456)
+        }
+        //------------ Camara -------------------------------------------------------
+
+        root.direccion_tecnico.setOnClickListener {
+            var intent = Intent(root.context, MapsActivity::class.java)
+            startActivityForResult(intent,789)
         }
 
         // ---------------------------------- SPINNER -----------------------------------
@@ -180,5 +182,9 @@ class OfrecerServiciosFragment : Fragment() {
             root.foto.setImageURI(data?.data)
         }*/
         //------------ Galeria -------------------------------------------------------
+
+        if(requestCode == 789 && resultCode == Activity.RESULT_OK){
+            root.direccion_tecnico.text = data?.extras?.getString("ubicacion")
+        }
     }
 }
