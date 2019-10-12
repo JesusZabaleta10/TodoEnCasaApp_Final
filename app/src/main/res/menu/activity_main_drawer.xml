@@ -3,43 +3,51 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:showIn="navigation_view">
 
-    <item android:title="Usuario">
-        <menu>
-            <item
-                    android:id="@+id/nav_inicio"
-                    android:icon="@drawable/inicio"
-                    android:title="@string/inicio"/>
-            <item
-                    android:id="@+id/nav_categorias"
-                    android:icon="@drawable/categorias"
-                    android:title="@string/categorias"/>
-            <item
-                    android:id="@+id/nav_historial"
-                    android:icon="@drawable/historial"
-                    android:title="@string/historial"/>
-        </menu>
-    </item>
+        <item android:title="Usuario">
+            <menu>
+                <group android:checkableBehavior="single">
 
-    <item android:title="Técnico">
-        <menu>
-            <item
-                    android:id="@+id/nav_solicitudes"
-                    android:icon="@drawable/solicitudes"
-                    android:title="@string/solicitudes"/>
-            <item
-                    android:id="@+id/nav_ofrecer_servicios"
-                    android:icon="@drawable/ofrecer_servicios"
-                    android:title="@string/ofrecer_servicios"/>
-        </menu>
-    </item>
+                <item
+                        android:id="@+id/nav_inicio"
+                        android:icon="@drawable/inicio"
+                        android:title="@string/inicio"/>
+                <item
+                        android:id="@+id/nav_categorias"
+                        android:icon="@drawable/categorias"
+                        android:title="@string/categorias"/>
+                <item
+                        android:id="@+id/nav_historial"
+                        android:icon="@drawable/historial"
+                        android:title="@string/historial"/>
+                </group>
+            </menu>
+        </item>
 
-    <item android:title="Aplicación">
-        <menu>
-            <item
-                    android:id="@+id/nav_acerca"
-                    android:icon="@drawable/acerca"
-                    android:title="@string/acerca"/>
-        </menu>
-    </item>
+        <item android:title="Técnico">
+            <menu>
+                <group android:checkableBehavior="single">
+
+                <item
+                        android:id="@+id/nav_solicitudes"
+                        android:icon="@drawable/solicitudes"
+                        android:title="@string/solicitudes"/>
+                <item
+                        android:id="@+id/nav_ofrecer_servicios"
+                        android:icon="@drawable/ofrecer_servicios"
+                        android:title="@string/ofrecer_servicios"/>
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Aplicación">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                        android:id="@+id/nav_acerca"
+                        android:icon="@drawable/acerca"
+                        android:title="@string/acerca"/>
+                </group>
+            </menu>
+        </item>
 
 </menu>

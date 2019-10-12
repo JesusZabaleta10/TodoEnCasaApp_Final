@@ -11,14 +11,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/gainsboro"
+            android:gravity="center"
             android:orientation="horizontal">
-
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:id="@+id/marcador"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/back"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -28,7 +22,6 @@
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_marginLeft="100dp"
                 android:text="@string/solicitud"/>
     </LinearLayout>
 
@@ -158,16 +151,17 @@
             <ImageButton
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:id="@+id/cancelar"
-                    android:layout_marginLeft="80dp"
-                    android:src="@drawable/cancelar"
+                    android:layout_weight="1"
+                    android:id="@+id/aceptar"
+                    android:src="@drawable/aceptar"
                     android:scaleType="fitCenter"/>
+
             <ImageButton
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:id="@+id/aceptar"
-                    android:layout_marginLeft="30dp"
-                    android:src="@drawable/aceptar"
+                    android:layout_weight="1"
+                    android:id="@+id/cancelar"
+                    android:src="@drawable/cancelar"
                     android:scaleType="fitCenter"/>
 
         </LinearLayout>

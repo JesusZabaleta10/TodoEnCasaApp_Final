@@ -9,10 +9,8 @@ class MecanicaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mecanica)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
     }
 
     override fun onBackPressed() {

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.todoencasaapp_final">
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
             android:allowBackup="true"
@@ -10,74 +12,90 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name=".ValoracionServicio2Activity"
+                  android:parentActivityName=".ValoracionServicio2Activity"
                   android:label="Valoración del servicio">
         </activity>
         <activity android:name=".ValoracionServicioActivity"
+                  android:parentActivityName=".ValoracionServicioActivity"
                   android:label="Valoración del servicio">
         </activity>
         <activity android:name=".ContratarActivity"
+                  android:parentActivityName=".ContratarActivity"
                   android:label="Contratar">
         </activity>
         <activity android:name=".CertificadoActivity"
+                  android:parentActivityName=".CertificadoActivity"
                   android:label="Certificado">
         </activity>
         <activity android:name=".Instalaciones2Activity"
+                  android:parentActivityName=".Instalaciones2Activity"
                   android:label="Instalciones">
         </activity>
         <activity android:name=".InstalacionesActivity"
+                  android:parentActivityName=".InstalacionesActivity"
                   android:label="Instalciones">
         </activity>
         <activity android:name=".Solicitud3Activity"
+                  android:parentActivityName=".Solicitud3Activity"
                   android:label="Solicitud">
         </activity>
         <activity android:name=".Solicitud2Activity"
+                  android:parentActivityName=".Solicitud2Activity"
                   android:label="Solicitud">
         </activity>
         <activity android:name=".SolicitudActivity"
+                  android:parentActivityName=".SolicitudActivity"
                   android:label="Solicitud">
         </activity>
         <activity android:name=".DetallesServicio2Activity"
+                  android:parentActivityName=".DetallesServicio2Activity"
                   android:label="Detalles del servicio">
         </activity>
         <activity android:name=".DetallesServicioActivity"
+                  android:parentActivityName=".DetallesServicioActivity"
                   android:label="Detalles del servicio">
         </activity>
         <activity android:name=".MiCuentaActivity"
+                  android:parentActivityName=".MiCuentaActivity"
                   android:label="Mi cuenta">
         </activity>
         <activity android:name=".TerminosCondicionesActivity"
+                  android:parentActivityName=".TerminosCondicionesActivity"
                   android:label="Términos y condiciones">
         </activity>
         <activity android:name=".RegistrarActivity"
+                  android:parentActivityName=".RegistrarActivity"
                   android:label="Registrar">
         </activity>
         <activity
                 android:name=".AcarreosActivity"
+                android:parentActivityName=".AcarreosActivity"
                 android:label="Solicitar Servicio">
         </activity>
         <activity
                 android:name=".MecanicaActivity"
+                android:parentActivityName=".MecanicaActivity"
                 android:label="Solicitar Servicio">
         </activity>
         <activity
                 android:name=".LimpiezaActivity"
+                android:parentActivityName=".LimpiezaActivity"
                 android:label="Solicitar Servicio">
         </activity>
         <activity
                 android:name=".RefrigeracionActivity"
+                android:parentActivityName=".RefrigeracionActivity"
                 android:label="Solicitar Servicio">
         </activity>
         <activity
                 android:name=".ElectricidadActivity"
+                android:parentActivityName=".ElectricidadActivity"
                 android:label="Solicitar Servicio">
         </activity>
         <activity
                 android:name=".CarpinteriaActivity"
+                android:parentActivityName=".CarpinteriaActivity"
                 android:label="Solicitar Servicio">
-        </activity>
-        <activity
-                android:name=".CiudadesActivity"
-                android:label="Selecciona tu ciudad">
         </activity>
         <activity
                 android:name=".SplashActivity"

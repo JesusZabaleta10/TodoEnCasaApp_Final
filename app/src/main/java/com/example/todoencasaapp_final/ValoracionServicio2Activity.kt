@@ -9,10 +9,7 @@ class ValoracionServicio2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_valoracion_servicio2)
-
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onBackPressed() {

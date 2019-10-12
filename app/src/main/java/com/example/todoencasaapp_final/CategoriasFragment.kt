@@ -45,5 +45,4 @@ class CategoriasFragment : Fragment() {
         return root
     }
 
-
 }

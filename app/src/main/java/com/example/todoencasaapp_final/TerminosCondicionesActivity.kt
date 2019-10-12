@@ -9,10 +9,8 @@ class TerminosCondicionesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_terminos_condiciones)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
     }
 
     override fun onBackPressed() {

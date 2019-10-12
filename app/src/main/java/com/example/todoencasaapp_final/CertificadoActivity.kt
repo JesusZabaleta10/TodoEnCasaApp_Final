@@ -9,10 +9,8 @@ class CertificadoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_certificado)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
     }
 
     override fun onBackPressed() {

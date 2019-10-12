@@ -12,10 +12,7 @@ class InstalacionesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instalaciones)
-
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         card_tecnico.setOnClickListener {
             startActivity(Intent(this,Instalaciones2Activity::class.java))

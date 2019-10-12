@@ -158,7 +158,7 @@
     <string name="servicio3">Electricidad - Instalaciones</string>
     <string name="dia2">Dia del servicio</string>
     <string name="dia3">13/04/2017</string>
-    <string name="horas_disponibles">Horas disponibles</string>
+    <string name="hora_inicial_cliente">Hora inicial</string>
     <string name="horas_disponibles2">10:00 a 14:00</string>
     <string name="tu_direccion2">Cll 107B # 12A - 67</string>
     <string name="telefono_cliente">3137541189</string>
@@ -171,4 +171,61 @@
     <string name="comentario_servicio2">Excelente el servicio, muy amable el muchacho, es rápido, trabajador y se nota
         que fue bien formado.
     </string>
+    <string name="escoger_fecha">Escoja una fecha</string>
+    <string name="hora_inicial">Escoja una hora</string>
+    <string name="hora_final_cliente">Hora final</string>
+    <string name="examinar">Examinar</string>
+    <string-array name="categorias">
+        <item>Carpintería</item>
+        <item>Electricidad</item>
+        <item>Refrigeración</item>
+        <item>Limpieza</item>
+        <item>Mecánica</item>
+        <item>Acarreos</item>
+    </string-array>
+    <string-array name="carpinteria">
+        <item>Cocina</item>
+        <item>Muebles</item>
+        <item>Pisos</item>
+        <item>Puertas</item>
+        <item>Tapizados</item>
+    </string-array>
+    <string-array name="electricidad">
+        <item>Iluminación</item>
+        <item>Reparaciones</item>
+        <item>Instalciones</item>
+    </string-array>
+    <string-array name="refrigeracion">
+        <item>Aire acondicionado</item>
+        <item>Calentadores</item>
+        <item>Neveras</item>
+    </string-array>
+    <string-array name="limpieza">
+        <item>Alfombra</item>
+        <item>Lavandería</item>
+        <item>Muebles</item>
+    </string-array>
+    <string-array name="mecanica">
+        <item>Automóviles</item>
+        <item>Motocicletas</item>
+        <item>Bicicletas</item>
+        <item>Puertas</item>
+    </string-array>
+    <string-array name="acarreos">
+        <item>Acarreos</item>
+    </string-array>
+    <string-array name="ciudades2">
+        <item>Barranquilla</item>
+        <item>Bogotá</item>
+        <item>Cali</item>
+        <item>Cartagena</item>
+        <item>Ibagué</item>
+        <item>Medellín</item>
+        <item>Montelibano</item>
+        <item>Monteria</item>
+        <item>Valledupar</item>
+        <item>Envigado</item>
+        <item>Cúcuta</item>
+        <item>Pasto</item>
+    </string-array>
 </resources>

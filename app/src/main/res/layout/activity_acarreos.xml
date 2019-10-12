@@ -11,14 +11,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/gainsboro"
+            android:gravity="center"
             android:orientation="horizontal">
-
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:id="@+id/marcador"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/back"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -28,7 +22,6 @@
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_marginLeft="100dp"
                 android:text="@string/acarreo"/>
     </LinearLayout>
 

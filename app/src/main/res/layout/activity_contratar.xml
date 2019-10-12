@@ -11,14 +11,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/gainsboro"
+            android:gravity="center"
             android:orientation="horizontal">
-
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:id="@+id/marcador"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/back"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -28,7 +22,6 @@
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_marginLeft="100dp"
                 android:text="@string/contratar"/>
     </LinearLayout>
 
@@ -81,11 +74,12 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/fecha"
                     android:textSize="20sp"
+                    android:hint="@string/escoger_fecha"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/dia3"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -93,19 +87,36 @@
                     android:background="@color/gainsboro"/>
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/horas_disponibles"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/hora_inicial_cliente"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/hora_inicial"
+                    android:hint="@string/hora_inicial"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/horas_disponibles2"/>
+                    android:layout_marginBottom="10dp"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/hora_final_cliente"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hora_final"
+                    android:hint="@string/hora_inicial"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -177,6 +188,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/solicitar"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@color/orange"
                     android:textColor="@color/white"
                     android:text="@string/solicitar"/>

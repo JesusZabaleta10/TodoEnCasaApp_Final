@@ -11,14 +11,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/gainsboro"
+            android:gravity="center"
             android:orientation="horizontal">
-
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:id="@+id/marcador"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/back"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -28,7 +22,6 @@
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_marginLeft="90dp"
                 android:text="@string/instalaciones"/>
     </LinearLayout>
 
@@ -248,7 +241,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/categoria2"/>
+                    android:text="@string/electricidad"/>
 
             <View
                     android:layout_width="match_parent"
@@ -268,7 +261,7 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/sub_categoria2"/>
+                    android:text="@string/instalaciones"/>
 
             <View
                     android:layout_width="match_parent"

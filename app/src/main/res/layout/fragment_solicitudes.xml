@@ -6,9 +6,21 @@
              android:orientation="vertical"
              tools:context=".SolicitudesFragment">
 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/gainsboro"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/solicitudes"/>
+
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal"
             android:padding="5dp">
 

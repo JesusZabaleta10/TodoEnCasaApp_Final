@@ -10,32 +10,25 @@
                  android:layout_width="match_parent"
                  android:layout_height="match_parent">
 
-        <ImageView
+        <ViewFlipper
                 android:layout_width="match_parent"
                 android:layout_height="261dp"
-                android:id="@+id/mantenimiento"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/mantenimiento"/>
+                android:id="@+id/v_flipper"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:id="@+id/ciudades"
                 android:layout_marginTop="240dp"
+                android:gravity="center"
                 android:background="@color/colorPrimary"
                 android:orientation="horizontal">
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:id="@+id/ciudad"
-                    android:text="@string/ciudad"
-                    android:textSize="20sp"
-                    android:textAllCaps="true"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_marginLeft="130dp"
-                    android:textColor="@color/white"/>
+            <Spinner
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp_ciudades"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
 
             <ImageView
                     android:layout_width="wrap_content"

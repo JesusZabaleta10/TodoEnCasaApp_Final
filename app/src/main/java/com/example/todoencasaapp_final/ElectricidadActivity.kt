@@ -12,10 +12,7 @@ class ElectricidadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_electricidad)
-        
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         instalaciones.setOnClickListener{
             startActivity(Intent(this, InstalacionesActivity::class.java))

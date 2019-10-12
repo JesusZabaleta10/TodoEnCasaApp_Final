@@ -12,10 +12,7 @@ class ValoracionServicioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_valoracion_servicio)
-
-        marcador.setOnClickListener{
-            onBackPressed()
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         valorar_servicio.setOnClickListener {
             startActivity(Intent(this,ValoracionServicio2Activity::class.java))

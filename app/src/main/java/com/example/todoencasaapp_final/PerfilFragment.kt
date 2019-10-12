@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_inicio.view.*
+import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_perfil.view.*
 
 class PerfilFragment : Fragment() {
@@ -21,10 +21,12 @@ class PerfilFragment : Fragment() {
 
         root.b_registrar.setOnClickListener{
             startActivity(Intent(root.context, RegistrarActivity::class.java))
+            Toast.makeText(root.context,"Registro", Toast.LENGTH_SHORT).show()
         }
 
         root.b_login.setOnClickListener{
             startActivity(Intent(root.context, MiCuentaActivity::class.java))
+            Toast.makeText(root.context,"Sesión iniciada", Toast.LENGTH_SHORT).show()
         }
 
         return root

@@ -5,9 +5,21 @@
              android:layout_height="match_parent"
              tools:context=".OfrecerServiciosFragment">
 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/gainsboro"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/ofrecer_servicios"/>
+
     <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -22,6 +34,13 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
                     android:src="@drawable/usuario"/>
+
+            <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/galeria"
+                    android:text="@string/examinar"
+                    android:layout_gravity="center"/>
 
             <TextView
                     android:layout_width="match_parent"
@@ -207,14 +226,13 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/categoria"/>
 
-            <TextView
-                    android:layout_width="match_parent"
+            <Spinner
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
+                    android:id="@+id/sp_categorias"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/categoria2"/>
+                    android:layout_gravity="left"/>
 
             <View
                     android:layout_width="match_parent"
@@ -227,19 +245,27 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/sub_categoria"/>
 
-            <TextView
-                    android:layout_width="match_parent"
+            <Spinner
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
+                    android:id="@+id/sp_subcategorias"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/sub_categoria2"/>
+                    android:layout_gravity="left"/>
 
             <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/gainsboro"/>
+
+            <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/certificado2"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/certificado2"/>
 
             <Button
                     android:layout_width="250dp"
@@ -248,7 +274,6 @@
                     android:layout_gravity="center"
                     android:text="@string/certificado"
                     android:textSize="20sp"
-                    android:layout_marginTop="20dp"
                     android:textColor="@color/white"
                     android:background="@color/orange"/>
 

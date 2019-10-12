@@ -11,7 +11,6 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
-import kotlinx.android.synthetic.main.fragment_inicio.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -103,7 +102,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         val manager = supportFragmentManager
@@ -113,5 +112,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val categoriasFragment = CategoriasFragment()
             transaction.replace(R.id.frameLayout, categoriasFragment).commit()
         }
-    }
+    }*/
 }
