@@ -7,104 +7,91 @@
         android:layout_height="match_parent"
         tools:context=".PerfilFragment">
 
-    <ScrollView
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:id="@+id/progressBar"/>
 
-        <LinearLayout
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+        <EditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:id="@+id/et_id"
+                android:drawableStart="@drawable/id"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:hint="@string/identificacion"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_correo"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:layout_marginTop="20dp"
+                android:inputType="textEmailAddress"
+                android:hint="@string/correo"/>
 
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/et_correo"
-                    android:drawableStart="@drawable/user"
-                    android:drawablePadding="10dp"
-                    android:background="@null"
-                    android:layout_marginTop="20dp"
-                    android:inputType="textEmailAddress"
-                    android:hint="@string/correo"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_contraseña"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword"
+                android:hint="@string/contraseña"/>
 
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/et_contraseña"
-                    android:drawableStart="@drawable/password"
-                    android:drawablePadding="10dp"
-                    android:background="@null"
-                    android:layout_marginTop="20dp"
-                    android:inputType="textPassword"
-                    android:hint="@string/contraseña"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/b_login"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_animation"/>
 
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/b_login"
-                    android:text="@string/login"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/button_animation"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/olvidaste"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/olvidaste"/>
 
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/olvidaste"
-                    android:gravity="right"
-                    android:layout_marginTop="10dp"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorPrimary"
-                    android:text="@string/olvidaste"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/cuenta"/>
 
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/b_registrar"
+                android:text="@string/registrar"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_animation2"/>
 
-                <ImageButton
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:id="@+id/ib_facebook"
-                        android:layout_marginLeft="80dp"
-                        android:src="@drawable/facebook"
-                        android:scaleType="fitCenter"/>
-
-                <ImageButton
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:id="@+id/ib_google"
-                        android:layout_marginLeft="30dp"
-                        android:src="@drawable/google"
-                        android:scaleType="fitCenter"/>
-
-            </LinearLayout>
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="50dp"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="@string/cuenta"/>
-
-            <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/b_registrar"
-                    android:text="@string/registrar"
-                    android:textSize="20sp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/button_animation2"/>
-
-        </LinearLayout>
-
-    </ScrollView>
-
+    </LinearLayout>
 </FrameLayout>

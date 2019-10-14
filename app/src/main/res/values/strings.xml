@@ -75,7 +75,7 @@
     <string name="registro">Registro de usuario</string>
     <string name="nombres">Nombres</string>
     <string name="apellidos">Apellidos</string>
-    <string name="telefono">Teléfono celular</string>
+    <string name="telefono">Celular</string>
     <string name="confirmar_contraseña">Confirmar contraseña</string>
     <string name="ciudad_residencia">Ciudad de residencia</string>
     <string name="condiciones">Acepto terminos y condiciones</string>
@@ -261,4 +261,16 @@
     <string name="facatativa">Facatativá</string>
     <string name="girardot">Girardot</string>
     <string name="soacha">Soacha</string>
+    <string name="identificacion">Número de identificación</string>
+    <string name="ipiales">Ipiales</string>
+    <string name="cruz">La cruz</string>
+    <string name="union">La unión</string>
+    <string name="pasto">Pasto</string>
+    <string name="santacruz">Santacruz</string>
+    <string name="tumaco">Tumaco</string>
+    <string name="tulua">Tuluá</string>
+    <string name="sanpedro">San Pedro</string>
+    <string name="cartago">Cartago</string>
+    <string name="aguila">El Águila</string>
+    <string name="guacari">Guacarí</string>
 </resources>

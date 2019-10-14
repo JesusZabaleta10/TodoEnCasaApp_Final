@@ -9,7 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import android.widget.ViewFlipper
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_inicio.view.*
 
 class InicioFragment : Fragment() {
@@ -17,19 +19,15 @@ class InicioFragment : Fragment() {
     lateinit var viewflipper : ViewFlipper
     //val image = intArrayOf(R.drawable.mantenimiento,R.drawable.mantenimiento3,R.drawable.mantenimiento4)
     private lateinit var root: View
+    // ---------- Leer Base de Datos ---------------------
+    private lateinit var mDatabase: DatabaseReference //Ciudad
+    // ---------- Leer Base de Datos ---------------------
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         root = inflater.inflate(R.layout.fragment_inicio, container, false)
-
-        // ---------------------------------- SPINNER -----------------------------------
-        /*val adapter = ArrayAdapter.createFromResource(root.context, R.array.ciudades2, android.R.layout.simple_spinner_item)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        root.sp_ciudades.adapter = adapter*/
-        // ------------------------------------------------------------------------------
 
         //------------------ Auto Image Slider -----------------------------
         /*viewflipper = root.findViewById(R.id.v_flipper)
@@ -39,9 +37,26 @@ class InicioFragment : Fragment() {
         }*/
         // -------------------------------------------------------------------
 
+        // ---------- Leer Base de Datos ---------------------------------------------------------------
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Ciudad")
+
+        val datos = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if(dataSnapshot.exists()) {
+                    root.ciudad_usuario.text = dataSnapshot.child("ciudad").value.toString()
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Toast.makeText(root.context,"Error en la lectura de datos", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        mDatabase.addValueEventListener(datos)
+        // ---------- Leer Base de Datos ---------------------------------------------------------------
+
         root.ciudades.setOnClickListener{
-            var intent = Intent(root.context, DepartamentosActivity::class.java)
-            startActivityForResult(intent,1)
+            startActivity(Intent(root.context, DepartamentosActivity::class.java))
         }
 
         root.carpinteria.setOnClickListener{
@@ -81,12 +96,4 @@ class InicioFragment : Fragment() {
         viewflipper.setInAnimation(root.context, android.R.anim.slide_in_left)
         viewflipper.setOutAnimation(root.context, android.R.anim.slide_out_right)
     }
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if(requestCode == 1 && resultCode == Activity.RESULT_OK){
-            root.ciudad_usuario.text = data?.extras?.getString("antioquia")
-        }
-    }
-
 }

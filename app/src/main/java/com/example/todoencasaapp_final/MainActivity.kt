@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.action_settings -> {
                 val perfilFragment = PerfilFragment()
                 transaction.replace(R.id.frameLayout, perfilFragment).commit()
-                //finish()
             }
         }
         return super.onOptionsItemSelected(item)
@@ -101,16 +100,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
-
-    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-
-        if(requestCode == 1234 && resultCode == Activity.RESULT_OK){
-            val categoriasFragment = CategoriasFragment()
-            transaction.replace(R.id.frameLayout, categoriasFragment).commit()
-        }
-    }*/
 }

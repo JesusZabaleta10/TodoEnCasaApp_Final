@@ -1,8 +1,10 @@
 package com.example.todoencasaapp_final
 
 import android.app.Activity
+import android.content.ContentResolver
 import android.content.Intent
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.fragment.app.Fragment
@@ -12,11 +14,16 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_registrar.*
+import androidx.core.content.ContentResolverCompat
 import kotlinx.android.synthetic.main.fragment_ofrecer_servicios.view.*
+import java.io.IOException
 
 class OfrecerServiciosFragment : Fragment() {
 
+    private var bandera = 0
+    private val PICK_IMAGE_REQUEST = 1234
+    private var filePath: Uri ?= null
+    private var cr: ContentResolver ?= null
     private lateinit var root: View
     private var categoria = ""
 
@@ -27,22 +34,16 @@ class OfrecerServiciosFragment : Fragment() {
 
         root = inflater.inflate(R.layout.fragment_ofrecer_servicios, container, false)
 
-         //------------ Galeria -------------------------------------------------------
-        /*root.certificado2.setOnClickListener {
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                // Check runtime permission
-                if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
-                    // Permission denied
-                    val permission = arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE)
-                    requestPermissions(permission, PERMISSION_CODE)
-                }else{
-                    // Permission already granted
-                    pickImageFromGalery()
-                }
-            }else{
-                pickImageFromGalery()
-            }
-        }*/
+        //------------ Galeria -------------------------------------------------------
+        root.galeria.setOnClickListener {
+            galeria()
+            bandera = 1
+        }
+
+        root.certificado.setOnClickListener {
+            galeria()
+            bandera = 2
+        }
         //------------ Galeria -------------------------------------------------------
 
 
@@ -125,42 +126,19 @@ class OfrecerServiciosFragment : Fragment() {
 
                     root.sp_subcategorias.adapter = adapter
                 }
-                // -----------------------------------------------------------------------
+                //----------------- Spiner de SubCategorías ----------------------------
             }
         }
-        // ------------------------------------------------------------------------------
+        // ---------------------------------- SPINNER -----------------------------------
     return root
     }
 
-    //------------ Galeria -------------------------------------------------------
-    //private fun pickImageFromGalery() {
-        // Intent to pick image
-    //    val intent = Intent(Intent.ACTION_PICK)
-    //    intent.type = "image/*"
-    //    startActivityForResult(intent, IMAGE_PICK_CODE)
-    //}
-
-    /*override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when(requestCode){
-            PERMISSION_CODE -> {
-                if((grantResults.size) > 0 && (grantResults[0] == PackageManager.PERMISSION_GRANTED)){
-                    pickImageFromGalery()
-                    // Permission from popup granted
-                }else{
-                    // Permission from popup denied
-                    Toast.makeText(root.context,"Permiso denegado", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }*/
-
-    /*companion object{
-        // Image pick code
-        private val IMAGE_PICK_CODE = 1000
-        // Permission code
-        private val PERMISSION_CODE = 1001
-    }*/
-    //------------ Galeria -------------------------------------------------------
+    fun galeria(){
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(Intent.createChooser(intent,"Seleccionar imagen"), PICK_IMAGE_REQUEST)
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -178,9 +156,35 @@ class OfrecerServiciosFragment : Fragment() {
         //------------ Camara -------------------------------------------------------
 
         //------------ Galeria -------------------------------------------------------
-        /*if(resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
-            root.foto.setImageURI(data?.data)
-        }*/
+        if(requestCode == PICK_IMAGE_REQUEST &&
+            resultCode == Activity.RESULT_OK &&
+            data != null && data.data != null &&
+            bandera == 1)
+        {
+            filePath = data.data
+            try {
+                val bitmap = MediaStore.Images.Media.getBitmap(cr,filePath)
+                root.foto!!.setImageBitmap(bitmap)
+            }catch (e: IOException)
+            {
+                e.printStackTrace()
+            }
+        }
+
+        if(requestCode == PICK_IMAGE_REQUEST &&
+            resultCode == Activity.RESULT_OK &&
+            data != null && data.data != null &&
+            bandera == 2)
+        {
+            filePath = data.data
+            try {
+                val bitmap = MediaStore.Images.Media.getBitmap(cr,filePath)
+                root.certificado2!!.setImageBitmap(bitmap)
+            }catch (e: IOException)
+            {
+                e.printStackTrace()
+            }
+        }
         //------------ Galeria -------------------------------------------------------
 
         if(requestCode == 789 && resultCode == Activity.RESULT_OK){

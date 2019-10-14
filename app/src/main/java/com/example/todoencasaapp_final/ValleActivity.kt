@@ -4,63 +4,59 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_atlantico.*
+import kotlinx.android.synthetic.main.activity_valle.*
 
-class AtlanticoActivity : AppCompatActivity() {
+class ValleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_atlantico)
+        setContentView(R.layout.activity_valle)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-            barranquilla.setOnClickListener {
+            cali.setOnClickListener {
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
                 val ref = FirebaseDatabase.getInstance().getReference("Ciudad")
-                val ciudad = "Barranquilla"
+                val ciudad = "Cali"
                 ref.child("ciudad").setValue(ciudad)
                 startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
             }
-            candelaria.setOnClickListener {
+            cartago.setOnClickListener {
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
                 val ref = FirebaseDatabase.getInstance().getReference("Ciudad")
-                val ciudad = "Candelaria"
+                val ciudad = "Cartago"
                 ref.child("ciudad").setValue(ciudad)
                 startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
             }
-
-            manati.setOnClickListener {
+            aguila.setOnClickListener {
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
                 val ref = FirebaseDatabase.getInstance().getReference("Ciudad")
-                val ciudad = "Manatí"
+                val ciudad = "El Águila"
                 ref.child("ciudad").setValue(ciudad)
                 startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
             }
-
-            puerto.setOnClickListener {
+            guacari.setOnClickListener {
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
                 val ref = FirebaseDatabase.getInstance().getReference("Ciudad")
-                val ciudad = "Puerto Colombia"
+                val ciudad = "Guacarí"
                 ref.child("ciudad").setValue(ciudad)
                 startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
             }
-
-            santa.setOnClickListener {
+            sanpedro.setOnClickListener {
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
                 val ref = FirebaseDatabase.getInstance().getReference("Ciudad")
-                val ciudad = "Santa Lucia"
+                val ciudad = "San Pedro"
                 ref.child("ciudad").setValue(ciudad)
                 startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
             }
-
-            soledad.setOnClickListener {
+            tulua.setOnClickListener {
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------
                 val ref = FirebaseDatabase.getInstance().getReference("Ciudad")
-                val ciudad = "Soledad"
+                val ciudad = "Tuluá"
                 ref.child("ciudad").setValue(ciudad)
                 startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 // -------- Añadir la ciudad del usuario a la base de datos --------------------------

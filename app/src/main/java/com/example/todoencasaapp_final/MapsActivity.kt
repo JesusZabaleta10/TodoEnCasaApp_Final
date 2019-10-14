@@ -286,21 +286,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
             var geocoder = Geocoder(this)
             var ubicacion = et_ir.text.toString()
 
-            lateinit var list : MutableList<Address>
+            if(ubicacion != ""){
+                lateinit var list : MutableList<Address>
 
-            try {
-                list = geocoder.getFromLocationName(ubicacion, 1)
-            }catch (e: IOException){
+                try {
+                    list = geocoder.getFromLocationName(ubicacion, 1)
+                }catch (e: IOException){
 
+                }
+                if (list.size > 0) {
+
+                    var address: Address = list.get(0)
+                    var position = LatLng(address.latitude, address.longitude)
+                    placeMarkerOnMap(position)
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 15F))
+                } else
+                    Toast.makeText(this, "Direccion no encontrada", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "Escriba una dirección", Toast.LENGTH_SHORT).show()
             }
-            if (list.size > 0) {
-
-                var address: Address = list.get(0)
-                var position = LatLng(address.latitude, address.longitude)
-                placeMarkerOnMap(position)
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 15F))
-            } else
-                Toast.makeText(this, "Direccion no encontrada", Toast.LENGTH_SHORT).show()
         }
         // ----------------- Buscar una dirección -------------------
 
