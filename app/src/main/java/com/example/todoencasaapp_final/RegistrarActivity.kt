@@ -97,7 +97,7 @@ class RegistrarActivity : AppCompatActivity() {
         val contraseña = password.text.toString()
         val repetir_contraseña = repeat_password.text.toString()
         val direccion_usuario = direccion.text.toString()
-        val foto = ""
+        val foto = "https://firebasestorage.googleapis.com/v0/b/fir-application-e8f25.appspot.com/o/usuarios%2F123?alt=media&token=d5da381b-9243-47d9-83e8-b93344f63df1"
 
         if((nombres == "") || (apellidos == "")|| (num_identificacion == "") || (correo == "")|| (celular == "") || (contraseña == "")|| (repetir_contraseña == "")|| (direccion_usuario == "")){
             Toast.makeText(this, "Hay campos sin llenar", Toast.LENGTH_SHORT).show()
@@ -183,7 +183,7 @@ class RegistrarActivity : AppCompatActivity() {
     }
 
     // ------------------- Guardar foto en firebase ---------------------------
-    private fun saveImage(){
+    /*private fun saveImage(){
 
         storage = FirebaseStorage.getInstance()
         val photoRef = storage.reference.child("Usuarios").child(identificacion.text.toString())
@@ -257,7 +257,7 @@ class RegistrarActivity : AppCompatActivity() {
                     }
                 }
         }
-    }
+    }*/
 
     override fun onBackPressed() {
         super.onBackPressed()

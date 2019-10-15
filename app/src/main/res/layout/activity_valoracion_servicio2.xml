@@ -40,7 +40,7 @@
                     android:layout_height="200dp"
                     android:id="@+id/foto"
                     android:layout_gravity="center"
-                    android:src="@drawable/foto_duvan"/>
+                    android:src="@drawable/usuario"/>
 
             <ImageView
                     android:layout_width="wrap_content"
@@ -54,16 +54,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/nombre_completo"/>
+                    android:textSize="15sp"
+                    android:text="@string/nombres"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/nombre_tecnico"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/nombre_completo2"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -74,16 +75,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/edad"/>
+                    android:textSize="15sp"
+                    android:text="@string/apellidos"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/apellido_tecnico"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/edad_tecnico"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -94,44 +96,101 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/contacto_tecnico"/>
+                    android:textSize="15sp"
+                    android:text="@string/nacimiento"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/nacimiento"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/contacto"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/gainsboro"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/contacto2"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/identificacion"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/identificacion_tecnico"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/telefono"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/celular_tecnico"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/correo"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/correo_tecnico"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/descripcion"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/descripcion"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/descripcion2"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -142,16 +201,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/experiencia"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/experiencia"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/experiencia2"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -162,46 +222,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/horario"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/horario"
                     android:textSize="20sp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:text="@string/horario2"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="@string/horario3"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="@string/horario4"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="@string/horario5"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="@string/horario6"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/horario7"/>
+                    android:textColor="@color/black"/>
 
             <View
                     android:layout_width="match_parent"
@@ -212,16 +241,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/direccion_tecnico"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/direccion_tecnico"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/direccion_tecnico2"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -232,16 +262,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/categoria"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/categoria"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/categoria2"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -252,16 +283,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/sub_categoria"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/subcategoria"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/sub_categoria2"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -274,42 +306,37 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/comentarios"/>
 
-            <LinearLayout
+            <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="horizontal">
+                    android:id="@+id/comentarios"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"/>
 
-                <ImageView
-                        android:layout_width="180dp"
-                        android:layout_height="90dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/vicky"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gainsboro"/>
 
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="1">
+            <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/certificado"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/certificado2"/>
 
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textColor="@color/black"
-                            android:text="@string/cliente"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"
-                            android:text="@string/comentario_servicio2"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inicio"
+                    android:text="@string/ir_inicio"
+                    android:textSize="20sp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"/>
 
         </LinearLayout>
 

@@ -125,7 +125,7 @@
     <string name="descripcion2">Realizo diseño de planos eléctricos, montajes eléctricos, cableado estructurado, instalo
         todo lo que tiene que ver con iluminación, sistema de seguridad electrónico, alarmas, sensores, etc.
     </string>
-    <string name="experiencia">Experiencia</string>
+    <string name="experiencia">Experiencia (meses)</string>
     <string name="experiencia2">46 meses</string>
     <string name="categoria">Categoria</string>
     <string name="categoria2">Electricidad</string>
@@ -133,7 +133,7 @@
     <string name="sub_categoria2">Instalaciones</string>
     <string name="certificado">Adjuntar certificado</string>
     <string name="registrar_tecnico">Registrarme como técnico</string>
-    <string name="horario">Horarios</string>
+    <string name="horario">Horarios de atención</string>
     <string name="horario2">Domingo de 07:00 a 17:00</string>
     <string name="horario3">Lunes de 07:00 a 17:00</string>
     <string name="horario4">Martes de 07:00 a 17:00</string>
@@ -151,7 +151,6 @@
     <string name="finalizar">Finalizar servicio</string>
     <string name="electricista3">Brayan Gonzalez</string>
     <string name="comentarios">Comentarios</string>
-    <string name="comentarios2"/>
     <string name="certificado2">Certificado</string>
     <string name="contratar">Contratar</string>
     <string name="servicio2">Servicio</string>
@@ -163,7 +162,7 @@
     <string name="tu_direccion2">Cll 107B # 12A - 67</string>
     <string name="telefono_cliente">3137541189</string>
     <string name="necesitas">Escribe lo que necesitas</string>
-    <string name="datos_cliente">Datos del cliente</string>
+    <string name="datos_cliente">Datos del servicio</string>
     <string name="solicitar">Solicitar</string>
     <string name="valoracion">Valoración del servicio</string>
     <string name="valorar_servicio">Valorar servicio</string>
@@ -175,6 +174,15 @@
     <string name="hora_inicial">Escoja una hora</string>
     <string name="hora_final_cliente">Hora final</string>
     <string name="examinar">Examinar</string>
+    <string-array name="dias">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
     <string-array name="categorias">
         <item>Carpintería</item>
         <item>Electricidad</item>
@@ -273,4 +281,9 @@
     <string name="cartago">Cartago</string>
     <string name="aguila">El Águila</string>
     <string name="guacari">Guacarí</string>
+    <string name="recuperar">Recuperar contraseña</string>
+    <string name="nacimiento">Fecha de nacimiento</string>
+    <string name="lunes">Lunes</string>
+    <string name="ir_inicio">Ir al inicio</string>
+    <string name="estado5">Estado: Finalizado</string>
 </resources>

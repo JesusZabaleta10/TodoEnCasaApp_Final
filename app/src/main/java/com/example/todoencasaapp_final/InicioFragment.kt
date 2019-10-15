@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_inicio.view.*
 class InicioFragment : Fragment() {
 
     lateinit var viewflipper : ViewFlipper
-    //val image = intArrayOf(R.drawable.mantenimiento,R.drawable.mantenimiento3,R.drawable.mantenimiento4)
+    val image = intArrayOf(R.drawable.mantenimiento,R.drawable.mantenimiento3,R.drawable.mantenimiento4)
     private lateinit var root: View
     // ---------- Leer Base de Datos ---------------------
     private lateinit var mDatabase: DatabaseReference //Ciudad
@@ -30,11 +30,11 @@ class InicioFragment : Fragment() {
         root = inflater.inflate(R.layout.fragment_inicio, container, false)
 
         //------------------ Auto Image Slider -----------------------------
-        /*viewflipper = root.findViewById(R.id.v_flipper)
+        viewflipper = root.findViewById(R.id.v_flipper)
 
         for(i in 0 until image.size) {
             flip_image(image[i])
-        }*/
+        }
         // -------------------------------------------------------------------
 
         // ---------- Leer Base de Datos ---------------------------------------------------------------

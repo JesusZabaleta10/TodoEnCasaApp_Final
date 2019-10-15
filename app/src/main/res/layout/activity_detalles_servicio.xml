@@ -78,53 +78,71 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/estado"
                 android:textSize="15sp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/black"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/dia"
+                android:id="@+id/servicio_solicitud"
+                android:layout_marginBottom="5dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hora"
+                android:id="@+id/dia_solicitud"
+                android:layout_marginBottom="5dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/direccion"
+                android:id="@+id/hora_solicitud"
+                android:layout_marginBottom="5dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/celular"
+                android:id="@+id/direccion_solicitud"
+                android:layout_marginBottom="5dp"
                 android:textSize="15sp"
                 android:textColor="@color/black"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/servicio"
-                android:textSize="15sp"
-                android:textColor="@color/black"/>
-
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/fecha"
+                android:id="@+id/celular_solicitud"
                 android:textSize="15sp"
                 android:textColor="@color/black"/>
 
         <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gainsboro"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/descripcion"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descripcion_solicitud"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/gainsboro"/>
 

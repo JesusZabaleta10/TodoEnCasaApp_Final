@@ -2,6 +2,7 @@ package com.example.todoencasaapp_final
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -22,11 +23,13 @@ class PerfilFragment : Fragment() {
     private lateinit var root: View
 
     // ---------- Leer Base de Datos ---------------------
-    private lateinit var mDatabase: DatabaseReference //Usuarios
-    private lateinit var mDatabase2: DatabaseReference //Identificacion
+    private lateinit var mDatabase: DatabaseReference // Usuarios o Tecnico
+    private lateinit var mDatabase2: DatabaseReference // Identificacion
+    private lateinit var mDatabase3: DatabaseReference // Bandera
     // ---------- Leer Base de Datos ---------------------
 
     private var identificacion = ""
+    private var bandera = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +37,31 @@ class PerfilFragment : Fragment() {
     ): View? {
 
         root = inflater.inflate(R.layout.fragment_perfil, container, false)
+
+        progressBar = root.findViewById(R.id.progressBar)
+        auth = FirebaseAuth.getInstance()
+
+        root.olvidaste.setOnClickListener {
+            startActivity(Intent(root.context,RecuperarPassActivity::class.java))
+        }
+
+        // ---------- Leer Base de Datos ---------------------------------------------------------------
+        mDatabase3 = FirebaseDatabase.getInstance().getReference().child("Bandera")
+
+        val datos3 = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if(dataSnapshot.exists()) {
+                    bandera = dataSnapshot.child("bandera").value.toString()
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Toast.makeText(root.context,"Error en la lectura de datos",Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        mDatabase3.addValueEventListener(datos3)
+        // ---------- Leer Base de Datos ---------------------------------------------------------------
 
         // ---------- Leer Base de Datos ---------------------------------------------------------------
         mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion")
@@ -52,9 +80,6 @@ class PerfilFragment : Fragment() {
 
         mDatabase2.addValueEventListener(datos)
         // ---------- Leer Base de Datos ---------------------------------------------------------------
-
-        progressBar = root.findViewById(R.id.progressBar)
-        auth = FirebaseAuth.getInstance()
 
         root.b_registrar.setOnClickListener {
             startActivity(Intent(root.context, RegistrarActivity::class.java))
@@ -106,13 +131,25 @@ class PerfilFragment : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.child("Usuarios").child(identificacion).exists()){
 
+                    // -------- Añadir la bandera a la base de datos --------------------------
+                    val ref = FirebaseDatabase.getInstance().getReference("Bandera")
+                    val bandera = "usuario"
+                    ref.child("bandera").setValue(bandera)
+                    // -------- Añadir la bandera a la base de datos --------------------------
+
                     startActivity(Intent(root.context,MiCuentaActivity::class.java))
                     getActivity()?.finish()
                     Toast.makeText(root.context, "Sesión iniciada", Toast.LENGTH_SHORT).show()
 
                 }else if(dataSnapshot.child("Tecnico").child(identificacion).exists()){
 
-                    startActivity(Intent(root.context,MiCuentaActivity::class.java))
+                    // -------- Añadir la bandera a la base de datos --------------------------
+                    val ref = FirebaseDatabase.getInstance().getReference("Bandera")
+                    val bandera = "tecnico"
+                    ref.child("bandera").setValue(bandera)
+                    // -------- Añadir la bandera a la base de datos --------------------------
+
+                    startActivity(Intent(root.context,MiCuentaTecnicoActivity::class.java))
                     getActivity()?.finish()
                     Toast.makeText(root.context, "Sesión iniciada", Toast.LENGTH_SHORT).show()
                 }
@@ -135,11 +172,16 @@ class PerfilFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
+
         if (currentUser != null) {
-            startActivity(Intent(root.context,MiCuentaActivity::class.java))
-            getActivity()?.finish()
+            if(bandera == "usuario"){
+                startActivity(Intent(root.context,MiCuentaActivity::class.java))
+                getActivity()?.finish()
+            }else if(bandera == "tecnico") {
+                startActivity(Intent(root.context, MiCuentaTecnicoActivity::class.java))
+                getActivity()?.finish()
+            }
         }
     }
 }

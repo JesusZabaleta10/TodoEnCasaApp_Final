@@ -7,6 +7,14 @@
         android:orientation="vertical"
         tools:context=".ContratarActivity">
 
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:id="@+id/progressBar"/>
+
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -48,17 +56,18 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:layout_marginTop="20dp"
                     android:text="@string/servicio2"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/servicio"
                     android:textSize="20sp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/servicio3"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -68,6 +77,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:layout_marginTop="10dp"
                     android:text="@string/dia2"/>
 
@@ -89,6 +99,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:text="@string/hora_inicial_cliente"/>
 
@@ -106,6 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/hora_final_cliente"/>
 
             <TextView
@@ -127,16 +139,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textSize="15sp"
                     android:text="@string/direccion_tecnico"/>
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:id="@+id/direccion"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/tu_direccion2"/>
+                    android:textSize="20sp"
+                    android:hint="@string/buscar_direccion"/>
 
             <View
                     android:layout_width="match_parent"
@@ -146,17 +160,20 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:layout_marginTop="10dp"
                     android:text="@string/telefono"/>
 
-            <TextView
+            <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/celular_servicio"
+                    android:background="@null"
                     android:textSize="20sp"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/telefono_cliente"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"
@@ -166,17 +183,20 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="15sp"
                     android:layout_marginTop="10dp"
                     android:text="@string/necesitas"/>
 
-            <TextView
+            <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/necesidad"
+                    android:inputType="text"
                     android:textSize="20sp"
+                    android:background="@null"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/descripcion3"/>
+                    android:layout_marginBottom="10dp"/>
 
             <View
                     android:layout_width="match_parent"

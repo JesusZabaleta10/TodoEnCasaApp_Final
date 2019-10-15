@@ -19,9 +19,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ValleActivity"
-                  android:label="Escoge tu ciudad"
-                  android:parentActivityName=".ValleActivity">
+        <activity android:name=".MiCuentaTecnicoActivity"
+                  android:label="Mi cuenta"
+                  android:parentActivityName=".MiCuentaTecnicoActivity">
+        </activity>
+        <activity android:name=".RecuperarPassActivity"
+                  android:label="Recuperar contraseña"
+                  android:parentActivityName=".RecuperarPassActivity">
+        </activity>
+        <activity
+                android:name=".ValleActivity"
+                android:label="Escoge tu ciudad"
+                android:parentActivityName=".ValleActivity">
         </activity>
         <activity
                 android:name=".NarinoActivity"
