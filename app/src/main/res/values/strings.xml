@@ -102,7 +102,7 @@
     <string name="ciudad_usuario">Ciudad del usuario</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
     <string name="electricista">Duvan Mendoza</string>
-    <string name="tecnico">Técnico electricista</string>
+    <string name="tecnico">Técnico</string>
     <string name="electricista2">Camilo Hernandez</string>
     <string name="detalles">Detalles del servicio</string>
     <string name="estado">Estado: Solicitado</string>
