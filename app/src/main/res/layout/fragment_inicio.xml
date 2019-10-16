@@ -30,6 +30,7 @@
                     android:id="@+id/ciudad_usuario"
                     android:textSize="20sp"
                     android:textColor="@color/black"
+                    android:text="@string/bogota"
                     android:gravity="center"/>
 
             <ImageView

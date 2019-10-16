@@ -301,7 +301,13 @@ class OfrecerServiciosFragment : Fragment() {
         val nombres = nombre_tecnico.text.toString()
         val apellidos = apellido_tecnico.text.toString()
         val fecha = nacimiento.text.toString()
+
+        // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+        val ref = FirebaseDatabase.getInstance().getReference("Identificacion_Tecnico")
         val num_identificacion = identificacion_tecnico.text.toString()
+        ref.child("identificacion_tecnico").setValue(num_identificacion)
+        // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+
         val celular = celular_tecnico.text.toString()
         val correo = correo_tecnico.text.toString()
         val contraseña = contraseña.text.toString()

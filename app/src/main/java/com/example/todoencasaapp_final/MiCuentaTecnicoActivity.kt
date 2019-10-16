@@ -15,6 +15,7 @@ class MiCuentaTecnicoActivity : AppCompatActivity() {
     // ---------- Leer Base de Datos ---------------------
     private lateinit var mDatabase: DatabaseReference // Identificacion
     private lateinit var mDatabase2: DatabaseReference // Tecnico
+    private lateinit var mDatabase3: DatabaseReference // Comentarios
     // ---------- Leer Base de Datos ---------------------
     private var identificacion = ""
 
@@ -24,12 +25,30 @@ class MiCuentaTecnicoActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // ---------- Leer Base de Datos ---------------------------------------------------------------
-        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion")
+        mDatabase3 = FirebaseDatabase.getInstance().getReference().child("Comentarios")
+
+        val datos3 = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if(dataSnapshot.exists()) {
+                    comentarios.text = dataSnapshot.child("comentarios").value.toString()
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Toast.makeText(this@MiCuentaTecnicoActivity,"Error en la lectura de datos",Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        mDatabase3.addValueEventListener(datos3)
+        // ---------- Leer Base de Datos ---------------------------------------------------------------
+
+        // ---------- Leer Base de Datos ---------------------------------------------------------------
+        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion_Tecnico")
 
         val datos2 = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
-                    identificacion = dataSnapshot.child("identificacion").value.toString()
+                    identificacion = dataSnapshot.child("identificacion_tecnico").value.toString()
                     Log.d("Identificacion: ",identificacion)
                 }
             }
@@ -73,6 +92,19 @@ class MiCuentaTecnicoActivity : AppCompatActivity() {
         // ---------- Leer Base de Datos ---------------------------------------------------------------
 
         b_cerrar_sesion.setOnClickListener{
+
+            // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+            val ref = FirebaseDatabase.getInstance().getReference("Identificacion")
+            val identificacion = "NULL"
+            ref.child("identificacion").setValue(identificacion)
+            // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+
+            // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+            val ref2= FirebaseDatabase.getInstance().getReference("Bandera")
+            val bandera = "NULL"
+            ref2.child("bandera").setValue(bandera)
+            // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+
             FirebaseAuth.getInstance().signOut()
             startActivity(Intent(this,MainActivity::class.java))
             Toast.makeText(this,"Sesión cerrada",Toast.LENGTH_SHORT).show()
@@ -82,6 +114,7 @@ class MiCuentaTecnicoActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
+
         startActivity(Intent(this,MainActivity::class.java))
         finish()
     }

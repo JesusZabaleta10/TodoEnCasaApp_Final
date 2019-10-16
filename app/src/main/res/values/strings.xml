@@ -286,4 +286,5 @@
     <string name="lunes">Lunes</string>
     <string name="ir_inicio">Ir al inicio</string>
     <string name="estado5">Estado: Finalizado</string>
+    <string name="usuario_cliente">Cliente</string>
 </resources>

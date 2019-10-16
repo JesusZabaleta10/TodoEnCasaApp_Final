@@ -24,12 +24,12 @@ class SolicitudActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     // ---------- Leer Base de Datos ---------------------------------------------------------------
-        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion")
+        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion_Tecnico")
 
         val datos2 = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
-                    identificacion = dataSnapshot.child("identificacion").value.toString()
+                    identificacion = dataSnapshot.child("identificacion_tecnico").value.toString()
                 }
             }
 

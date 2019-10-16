@@ -23,12 +23,12 @@ class DetallesServicio2Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // ---------- Leer Base de Datos ---------------------------------------------------------------
-        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion")
+        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion_Tecnico")
 
         val datos2 = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
-                    identificacion = dataSnapshot.child("identificacion").value.toString()
+                    identificacion = dataSnapshot.child("identificacion_tecnico").value.toString()
                 }
             }
 
@@ -47,6 +47,9 @@ class DetallesServicio2Activity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 Log.d("Datos: ",dataSnapshot.value.toString())
                 if(dataSnapshot.exists()){
+                    val nombres = dataSnapshot.child("Tecnico").child(identificacion).child("nombres").value.toString()
+                    val apellidos = dataSnapshot.child("Tecnico").child(identificacion).child("apellidos").value.toString()
+                    nombre_tecnico.text = nombres + " " + apellidos
                     servicio_solicitud.text = "Servicio: " + dataSnapshot.child("DatosServicio").child(identificacion).child("servicio").value.toString()
                     dia_solicitud.text = "Dia: " + dataSnapshot.child("DatosServicio").child(identificacion).child("dia").value.toString()
                     hora_solicitud.text = "Hora: " + dataSnapshot.child("DatosServicio").child(identificacion).child("hora").value.toString()

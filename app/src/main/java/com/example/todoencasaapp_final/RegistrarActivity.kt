@@ -91,7 +91,13 @@ class RegistrarActivity : AppCompatActivity() {
     private fun createNewAccount(){
         val nombres = nombres_usuario.text.toString()
         val apellidos = apellidos_usuario.text.toString()
+
+        // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+        val ref = FirebaseDatabase.getInstance().getReference("Identificacion_Usuario")
         val num_identificacion = identificacion.text.toString()
+        ref.child("identificacion_usuario").setValue(num_identificacion)
+        // -------- Añadir la identificacion del usuario a la base de datos --------------------------
+
         val correo = correo_usuario.text.toString()
         val celular = celular_usuario.text.toString()
         val contraseña = password.text.toString()

@@ -50,12 +50,12 @@ class ContratarActivity : AppCompatActivity() {
         // ----------- Registro con correo y contraseña ------------
 
         // ---------- Leer Base de Datos ---------------------------------------------------------------
-        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion")
+        mDatabase2 = FirebaseDatabase.getInstance().getReference().child("Identificacion_Tecnico")
 
         val datos2 = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
-                    identificacion = dataSnapshot.child("identificacion").value.toString()
+                    identificacion = dataSnapshot.child("identificacion_tecnico").value.toString()
                 }
             }
 
@@ -159,6 +159,7 @@ class ContratarActivity : AppCompatActivity() {
             val ref = FirebaseDatabase.getInstance().getReference("DatosServicio")
             val datosServicio = DatosServicio(servicios2,dia,hora,direccion_usuario,celular,descripcion)
             ref.child(identificacion).setValue(datosServicio)
+            // -------- Añadir la ciudad del usuario a la base de datos --------------------------
 
             startActivity(Intent(this,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
             Toast.makeText(this,"Técnico contratado",Toast.LENGTH_SHORT).show()
